@@ -1,0 +1,12 @@
+body
+{
+	font-size: 16px;
+}
+.division_superior
+{
+	border: 2px solid red;
+}
+.division_superior header figure
+{
+	border: 2px solid red;
+}

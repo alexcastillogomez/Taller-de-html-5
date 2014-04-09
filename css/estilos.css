@@ -1,12 +1,118 @@
+	/*#455F00; dorado*/
+	/*#e8e9ea; gris */
+	/*#2e005e; Color Rosa*/
+	/*#5474B5;  azul*/
+a
+{
+	text-decoration: none;
+}
 body
 {
 	font-size: 16px;
+	font-family: 'Varela', sans-serif;
 }
 .division_superior
 {
-	border: 2px solid red;
+	/*border: 2px solid red;*/
+	overflow: hidden;
+}
+.division_superior header
+{
+	border-bottom: 1px solid #455F00;
+	overflow: hidden;
+	padding: 0.5em;
 }
 .division_superior header figure
 {
-	border: 2px solid red;
+	/*border: 2px solid red;*/
+	display: inline-block;
+	float: right;
+	margin: 0;
+	width: 150px;
+}
+.division_superior header figure img
+{
+	width: 100%;
+}
+.division_inferior
+{
+	background-color: #e8e9ea;
+	padding: 0.5em;
+}
+.division_inferior .fila_busqueda
+{
+	overflow: hidden;
+	/*border: 2px solid red;*/
+}
+.division_inferior .fila_busqueda h2
+{
+	margin: 0;
+	/*border: 2px solid red;*/
+	display: inline-block;
+	color: #2e005e;
+}
+.division_inferior .fila_busqueda div
+{
+	display: inline-block;
+	float: right;
+	padding-top: 4px;
+}
+.division_inferior .fila_busqueda div input
+{
+	/*border: 2px solid red;*/
+}
+.division_inferior .portada
+{
+	/*border: 2px solid red;*/
+	margin: 1em 0;
+	position: relative;
+	overflow: hidden;
+}
+.division_inferior .portada figure
+{
+	margin: 0;
+	width: 100%;
+}
+.division_inferior .portada figure img
+{
+	width: 100%;
+}
+.division_inferior .portada div
+{
+	/*border:2px solid red;*/
+	height: 60px;
+	width: 100%;
+	position: absolute;
+	bottom: 4px;
+	background-color: black;
+	opacity: 0.7;
+}
+.division_inferior .albums
+{
+	/*border: 2px solid red;*/
+}
+.division_inferior .albums h3
+{
+	margin: 0;
+	color: #2e005e;
+	border-bottom: 1px solid #bebebe;
+}
+.division_inferior .albums .album
+{
+	padding: 0.5em;
+	/*border: 1px solid blue;*/
+	border-bottom: 1px solid #bebebe;
+}
+.division_inferior .albums .album .titulo_album
+{
+	display: inline-block;
+}
+.division_inferior .albums .album .titulo_album a
+{
+	color: #5474B5;
+}
+.division_inferior .albums .album .botones
+{
+	display: inline-block;
+	float: right;
 }

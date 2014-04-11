@@ -1,61 +1,151 @@
 <!doctype html>
 <html lang="es">
+<!-- Cabecera del documento, no se ve,sirve para especificar titulos, importaciones a CSS y JavaScript -->
 <head>
+	<!-- Permite el soporte de acentos y otros elementos latinoamericanos -->
 	<meta charset="UTF-8">
+	<!-- Titulo de la página -->
 	<title>Esta es mi primera pagina</title>
+	<!-- Importamos normalize.css -->
 	<link rel="stylesheet" type="text/css" href="css/normalize.css">
-	<link rel="stylesheet" type="text/css" 
-	href="css/estilos.css">
+	<!-- Importamos nuestros estilos -->
+	<link rel="stylesheet" type="text/css" href="css/estilos.css">
+	<!-- Importamos una fuente desde google fonts -->
 	<link href='http://fonts.googleapis.com/css?family=Varela' rel='stylesheet' type='text/css'>
 </head>
+<!-- Cuerpo del documento, lo que se mostrará en la pagina -->
 <body>
-
+	<!-- La etiqueta div permite realizar una división, su display por default es block -->
 	<div class="division_superior">
+	<!-- Etiqueta semantica para señalar la cabecera de la pagina -->
 		<header>
-			<a href="#" class="icono_menu">*</a> <!-- menu -->
+		<!-- Enlaces hacia otros lugares o paginas, su display por default es inline -->
+			<a href="#" class="icono_menu"></a> <!-- menu -->
+			<!-- Etiqueta semantica para señalar una imagen -->
 			<figure>
+			<!-- Inserccion de una imagen, su display por default es inline -->
 				<img src="img/logo.png">
 			</figure>
 		</header>   
 	</div>
 		<!-- Aca esta la division -->
 	<div class="division_inferior">
-		
+	<!-- Etiqueta semantica que indica la barra de navegación del sitio -->
+		<nav>
+		<!-- Elemento que representa una lista desordenada, su display por default es block y tiene margin y padding -->
+			<ul>
+			<!-- El li indica cada elemento de la lista -->
+				<li><a href="#">Albums</a></li>
+				<li><a href="#">Tops Hits</a></li>
+				<li><a href="#">Favoritos</a></li>
+				<li><a href="#">Perfil</a></li>
+				<li><a href="#">Configuracion</a></li>
+			</ul>
+		</nav>
+
 		<div class="fila_busqueda">
+		<!-- Indica un titulo, por defecto su display es block y tiene margenes -->
 			<h2>Pharell Williams</h2>
 			<div>
-				<a href="#" class="icono_lupa">*</a>
+				<a href="#" class="icono_lupa"></a>
+				<!-- Cuadro de texto para permitir que el usuario escriba -->
 				<input type="text">
 			</div>
 		</div>
 
-
+		<!-- Representa una seccion del contenido -->
 		<section class="portada">
 			<figure>
 				<img src="img/artist.jpg" alt="">
 			</figure>
 			<div>
-	<a href="#" class="icono_flecha_arriba">*</a>
-	<a href="#" class="icono_flecha_abajo">*</a>
-	<a href="#" class="icono_compartir">*</a>
+	<a href="#" class="icono_flecha_arriba"></a>
+	<a href="#" class="icono_flecha_abajo"></a>
+	<a href="#" class="icono_compartir"></a>
 			</div>
 		</section>
 
 
 
 		<section class="albums">
+			<h2 class="titulo_derecha">
+				Pharell Williams
+			</h2>
 			<h3>Albums</h3>
+			<!-- Representa una subseccion del contenido, relacionada con el tema del contenido del section que lo contiene -->
 			<article class="album">
 				<div class="titulo_album">
-					<a href="#">Frontin</a>
+				<a href="#" class="icono_disco">Frontin
+					</a>
 				</div>
 				<div class="botones">
-	<a href="#" class="icono_flecha_arriba">*</a>
-	<a href="#" class="icono_flecha_abajo">*</a>
-	<a href="#" class="icono_escuchar">*</a>
-	<a href="#" class="icono_compartir">*</a>
+	<a href="#" class="icono_flecha_arriba"></a>
+	<a href="#" class="icono_flecha_abajo"></a>
+	<a href="#" class="icono_escuchar"></a>
+	<a href="#" class="icono_compartir"></a>
 				</div>
 			</article>
+			<article class="album">
+				<div class="titulo_album">
+				<a href="#" class="icono_disco">Whatsapp
+					</a>
+				</div>
+				<div class="botones">
+	<a href="#" class="icono_flecha_arriba"></a>
+	<a href="#" class="icono_flecha_abajo"></a>
+	<a href="#" class="icono_escuchar"></a>
+	<a href="#" class="icono_compartir"></a>
+				</div>
+			</article>
+			<article class="album">
+				<div class="titulo_album">
+				<a href="#" class="icono_disco">Everywhere
+					</a>
+				</div>
+				<div class="botones">
+	<a href="#" class="icono_flecha_arriba"></a>
+	<a href="#" class="icono_flecha_abajo"></a>
+	<a href="#" class="icono_escuchar"></a>
+	<a href="#" class="icono_compartir"></a>
+				</div>
+			</article>
+			<article class="album">
+				<div class="titulo_album">
+				<a href="#" class="icono_disco">Hender
+					</a>
+				</div>
+				<div class="botones">
+	<a href="#" class="icono_flecha_arriba"></a>
+	<a href="#" class="icono_flecha_abajo"></a>
+	<a href="#" class="icono_escuchar"></a>
+	<a href="#" class="icono_compartir"></a>
+				</div>
+			</article>
+			<article class="album">
+				<div class="titulo_album">
+				<a href="#" class="icono_disco">Thank you
+					</a>
+				</div>
+				<div class="botones">
+	<a href="#" class="icono_flecha_arriba"></a>
+	<a href="#" class="icono_flecha_abajo"></a>
+	<a href="#" class="icono_escuchar"></a>
+	<a href="#" class="icono_compartir"></a>
+				</div>
+			</article>
+			<article class="album">
+				<div class="titulo_album">
+				<a href="#" class="icono_disco">Frontin
+					</a>
+				</div>
+				<div class="botones">
+	<a href="#" class="icono_flecha_arriba"></a>
+	<a href="#" class="icono_flecha_abajo"></a>
+	<a href="#" class="icono_escuchar"></a>
+	<a href="#" class="icono_compartir"></a>
+				</div>
+			</article>
+
 		</section>
 
 

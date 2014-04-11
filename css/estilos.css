@@ -1,9 +1,86 @@
-	/*#455F00; dorado*/
-	/*#e8e9ea; gris */
-	/*#2e005e; Color Rosa*/
-	/*#5474B5;  azul*/
+/*********************************************************************
+*	Colores: ;
+*	#455F00 dorado
+*	#e8e9ea gris 
+*	#2e005e Color Rosa
+*	#5474B5  azul
+**********************************************************************/
+/*Permite importar los iconFonts*/
+@font-face {
+	font-family: 'iconos'; /*Nombre de la famila de fuentes que usaremos, lo podemos cambiar por comodidad*/
+	src:url('../fonts/icomoon.eot?-te20wz');
+	src:url('../fonts/icomoon.eot?#iefix-te20wz') format('embedded-opentype'),
+		url('../fonts/icomoon.woff?-te20wz') format('woff'),
+		url('../fonts/icomoon.ttf?-te20wz') format('truetype'),
+		url('../fonts/icomoon.svg?-te20wz#icomoon') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+/*Asignando el icon de menu*/
+.icono_menu:before
+{
+	/*Asigna el tipo de fuente que se usará*/
+	font-family: "iconos"; 
+	/*El contenido necesario para que aparesca el iconfont*/
+	content: "\e602";
+	/*Tamaño de letra*/
+	font-size: 1.7em;
+	/*Cambiando posicion a absolute*/
+	position: absolute;
+	/*Moviendo 15px de izquierda a derecha*/
+	left: 15px;
+	/*Movimiendo 18px de arriba hacia abajo*/
+	top: 18px;
+	/*Asignando el color de la letra*/
+	color: #2e005e;
+}
+/*Asignando el icono de audifonos*/
+.icono_escuchar:before {
+	font-family: "iconos";
+	content: "\e600";
+}
+/*Asignando el icono de flecha abajo*/
+.icono_flecha_abajo:before {
+	font-family: "iconos";
+	content: "\e608";
+}
+/*Asignando el icono de la lupa*/
+.icono_lupa:before {
+	font-family: "iconos";
+	content: "\e601";
+}
+/*Asignando el icono de flecha arriba*/
+.icono_flecha_arriba:before {
+	font-family: "iconos";
+	content: "\e609";
+}
+/*Asignando el icono de compartir*/
+.icono_compartir:before {
+	font-family: "iconos";
+	content: "\e605";
+}
+/*Estilos de la etiqueta disco*/
+.icono_disco
+{
+	/*Posicion relativa, necesaria para ubicar posteriormente un elemento en absolute*/
+	position: relative;
+	/*Inline block, permite que el elemento ocupe lo necesario pero en linea y con margenes*/
+	display: inline-block;
+	/*Margen izquierdo*/
+	margin-left: 1em;
+}
+/*Asignando el icono del disco*/
+.icono_disco:before {
+	font-family: "iconos";
+	content: "\e606";
+	position: absolute;
+	left: -20px;
+	top: 2px;
+}
+/*Todas las etiquetas a*/
 a
 {
+	/*Elimina el subrayado de los enlaces*/
 	text-decoration: none;
 }
 body
@@ -11,43 +88,62 @@ body
 	font-size: 16px;
 	font-family: 'Varela', sans-serif;
 }
+header
+{
+	position: relative;
+}
 .division_superior
 {
-	/*border: 2px solid red;*/
+	/*Permite que el elemento recalcule todos los elementos dentro, permitiendo que los elementos float sean considerados, 
+	asi mismo, si el contenido se sale del espacio que ocupa la etiqueta, desaparece*/
 	overflow: hidden;
 }
 .division_superior header
 {
+	/*Border inferior*/
 	border-bottom: 1px solid #455F00;
 	overflow: hidden;
+	/*Margen interno*/
 	padding: 0.5em;
 }
 .division_superior header figure
 {
-	/*border: 2px solid red;*/
 	display: inline-block;
+	/*Flota un elemento hacia la derecha, rompiendo el modelo de caja, y evitando que el padre lo tome en cuenta en su espacio*/
 	float: right;
+	/*Margen hacia los cuatro lados*/
 	margin: 0;
+	/*Ancho del elemento*/
 	width: 150px;
 }
 .division_superior header figure img
 {
 	width: 100%;
+	/*Asigna el efecto de transicion y el tiempo que durará*/
+	-webkit-transition: 1s all ease;
+}
+/*El :hover permite aplicar estilos en el momento en que el mouse se coloque sobre el componente*/
+.division_superior header figure img:hover
+{	
+	-webkit-transition: 1s all ease;
+	/*Realiza un cambio al componente sin tomar en cuenta el modelo de caja, lo que permite que al colocarse sobre la imagen
+	del header este se haga un poco mas grande*/
+	-webkit-transform: scale(1.1, 1.1);
 }
 .division_inferior
 {
+	/*Color de fondo*/
 	background-color: #e8e9ea;
 	padding: 0.5em;
+	position: relative;
 }
 .division_inferior .fila_busqueda
 {
 	overflow: hidden;
-	/*border: 2px solid red;*/
 }
 .division_inferior .fila_busqueda h2
 {
 	margin: 0;
-	/*border: 2px solid red;*/
 	display: inline-block;
 	color: #2e005e;
 }
@@ -55,15 +151,22 @@ body
 {
 	display: inline-block;
 	float: right;
+	/*Margen interno solo en la parte superior*/
 	padding-top: 4px;
+	position: relative;
+}
+.division_inferior .fila_busqueda div a
+{
+	position: absolute;
+	left: 5px;
+	top: 8px;
 }
 .division_inferior .fila_busqueda div input
 {
-	/*border: 2px solid red;*/
+	padding-left: 1.5em;
 }
 .division_inferior .portada
 {
-	/*border: 2px solid red;*/
 	margin: 1em 0;
 	position: relative;
 	overflow: hidden;
@@ -79,13 +182,29 @@ body
 }
 .division_inferior .portada div
 {
-	/*border:2px solid red;*/
 	height: 60px;
 	width: 100%;
 	position: absolute;
+	/*Mueve el elemento de abajo hacia arriba*/
 	bottom: 4px;
 	background-color: black;
+	/*Cambia el nivel de transparencia del elemento, se mide de 0 a 1*/
 	opacity: 0.7;
+}
+.division_inferior .portada div a
+{
+	color: white;
+	font-size: 2em;
+	display: inline-block;
+	margin-top: 0.4em;
+	margin-left: 2px;
+	/*Coloca una sombra detras del texto*/
+	text-shadow: 1px 1px 5px white;
+}
+.division_inferior .portada div a:last-child
+{
+	float: right;
+	margin-right: 0.2em;
 }
 .division_inferior .albums
 {
@@ -100,7 +219,6 @@ body
 .division_inferior .albums .album
 {
 	padding: 0.5em;
-	/*border: 1px solid blue;*/
 	border-bottom: 1px solid #bebebe;
 }
 .division_inferior .albums .album .titulo_album
@@ -116,3 +234,159 @@ body
 	display: inline-block;
 	float: right;
 }
+.division_inferior .albums .album .botones a
+{
+	color: #455F00;
+	margin: 0 0.3em;
+	/*font-weight: bold;/* Permite poner en negritas el texto */
+}
+nav
+{
+	background-color: #e8e9ea;
+	position: absolute;
+	/*CSS maneja algo parecido a las capas, el z-index cambia la capa actual del componente*/
+	z-index: 2;
+	/*Alto del componente*/
+	height: 100%;
+	opacity: 0.9;
+}
+nav ul
+{
+	margin: 0;
+	padding: 0;
+}
+nav ul li a
+{
+	text-transform: uppercase;
+	padding: 0.5em 6em 0.5em 0.5em;
+	display: block;
+	/*Espacio entre las letras*/
+	letter-spacing: 2px;
+	font-weight: bold;
+	position: relative;
+	/*Permite que el elemento se oculte*/
+	display: none;
+}
+nav ul li a:hover
+{
+	background-color: #2e005e;
+	color: white;
+}
+nav ul li a:after
+{
+	font-family: 'iconos';
+	content: "\e60a";
+	position: absolute;
+	right: 0;
+	top: 10px;
+}
+.titulo_derecha
+{
+	margin: 0;
+	display: none;
+}
+/*Permite colocal un estilo cuando existen varios elementos, se lo colocamos a los numeros pares con odd y con even a los impares*/
+.division_inferior .albums .album:nth-child(odd)
+{
+	background-color: white;
+}
+/*El @media sirve como condicion, los siguientes estilos se aplicarán cuando la pantalla tenga minimo 900px de ancho*/
+@media screen and (min-width: 900px) {
+	.titulo_derecha
+	{
+		display: block;
+	}
+	body
+	{
+		background-color: #e8e9ea;
+	}
+	.icono_menu
+	{
+		display: none;
+	}
+	.division_superior header figure
+	{
+		float: left;
+	}
+	.division_superior
+	{
+		background-color: white;
+	}
+	.division_superior header
+	{
+		/*Permite que el elemento pueda tener solo un tamaño maximo de 1024px*/
+		max-width: 1024px;
+		margin: 0 auto;
+	}
+	.division_inferior
+	{
+		position: relative;
+		max-width: 1024px;
+		margin: 0 auto;
+	}
+	.division_inferior .fila_busqueda
+	{
+		position: absolute;
+		right: 10px;
+		top: -60px;
+	}
+	.division_inferior .fila_busqueda h2
+	{
+		display: none;
+	}
+	nav
+	{
+		display: block;
+		font-size: 0;
+		height: 50px;
+	}
+	nav ul li
+	{
+		display: inline-block;
+	}
+	nav ul li a
+	{
+		/*Permite convertir el texto a mayusculas*/
+		text-transform: uppercase;
+		display: block;
+		padding: 0.5em;
+		font-size: 16px;
+		color: #455F00;
+		border-top: 4px solid transparent;
+	}
+	nav ul li a:hover
+	{
+		border-top: 4px solid #455F00;
+		background-color: transparent;
+		color: #455F00;
+	}
+	nav ul li a:after
+	{
+		display: none;
+	}
+	.division_inferior
+	{
+		padding-top: 0;
+	}
+	.division_inferior .portada
+	{
+		width: 400px;
+		margin: 50px 1em 0 1em;
+		display: inline-block;
+	}
+	.division_inferior .albums
+	{
+		display: inline-block;
+		width: 400px;
+		margin: 50px 2em 0 2em;
+		/*Permite el elemento se coloque en la posición en la que se encuentra, pero arriba, nos permitio subir los albums
+		a ls misma altura que la portada*/
+		vertical-align: top;
+		border-left: 1px solid #455F00;
+		padding-left: 2em;
+	}
+}
+/*********************************************************************
+*	Curso de Html 5 y CSS3 (Computación del golfo campeche).
+* 	Visita: http://serprogramador.es ;
+**********************************************************************/
